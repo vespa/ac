@@ -39,7 +39,7 @@ gulp.task("javascript", ['lint'],function(){
       DEV_FOLDER + JS_FOLDER +"/reply.js",
       DEV_FOLDER + JS_FOLDER +"/actions.js",
     ])
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(concat("main.js"))
     .pipe(gulp.dest(APP_FOLDER + JS_FOLDER));
 });
