@@ -1,0 +1,18 @@
+{
+    "messages": [
+        {
+            "uid": "uid_1",
+            "sender": "older@test.com",
+            "subject": "there's a new notification",
+            "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fermentum justo id lorem condimentum aliquet. Donec ornare blandit porttitor. Nam dolor eros, pellentesque a commodo a, suscipit in leo. Vestibulum nisl metus, fermentum eu semper at, laoreet at elit. Cras vel diam nec orci convallis vulputate eget non est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lorem mi, congue non consectetur at, consequat ut ligula.",
+            "time_sent" : 1476957600
+        },
+        {
+            "uid": "uid_2",
+            "sender": "newer@test.com",
+            "subject": "who watches the watchmen?",
+            "message": "Fusce diam quam, efficitur ultrices tortor vitae, tempus varius libero. Nulla facilisi. Nullam sem arcu, cursus vitae finibus vel, egestas quis risus. ",
+            "time_sent": 1477180800
+        }
+    ]
+}

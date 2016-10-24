@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: helvetica, arial;
+    font-size: 12px; 
+    list-style-type:none;
+    color: $main_font_color;
+}
+
+$sizes: $total_columns;
+$i: 100/$total_columns;
+
+@while $sizes > 0 {
+    .col#{$sizes}{
+        @if  $sizes!= $total_columns {
+            width: $i * $sizes * 1%;
+            float:left;
+        } @else {
+            width:100%;
+        }
+    }
+    $sizes: $sizes - 1;
+}
+
+.row{
+    clear: both;
+    float:left;
+    width: 100%;
+}
+.btn{
+    margin: #{$grid/3}px;
+    padding: #{$grid/3}px;
+    border:1px solid #666;
+    @include rounded(3px);
+    font-weight: bold;
+}

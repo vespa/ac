@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Mailbox</title>
+        <link rel="stylesheet" type="text/css" href="style/main.css" />
+    </head>
+    <body>
+        <div class="container col12">
+            <div class="container-left  col5">
+                <div class="email-list">
+                    <h3 class="email-list-title">Inbox <span class="email-list-title-unread"> ( <span class="email-list-title-unread-count">  </span> ) </span> </h3>
+                    <ul class="email-list-items">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-rigth  col7">
+                <div class="email">
+                    <div class="email-tools">
+
+                        <ul class="email-tools-itens row" >                          
+                            <li class="col6">
+                                <a href="#delete"  class="email-tools-itens-unread">
+                                mark as unread
+                                </a>
+                            </li>
+                            <li class="col6">
+                                <a href="#"  class="email-tools-itens-delete">
+                                x
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="email-body">
+                        <div class="email-body-title row">
+                            <span class="email-body-title-subject "> Subject: </span>
+                            <h1 class="email-body-title-text"> </h1> 
+                        </div>
+                        <div class="email-body-text row">
+
+
+ 
+                        </div>
+                        <div class="email-body-actions row hide-action">
+                            <ul>
+                                <li> 
+                                    <a href="#reply">
+                                        reply 
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="email-reply hide-action row">
+                        <div class="email-reply-body">
+                            <div class="email-reply-body-title">
+
+                                <input type="text" class="row email-reply-body-title-input" value="" />
+                            
+                            </div>
+                            <div class="email-reply-body-text">
+                      
+                                <textarea  class="col12  email-reply-body-textarea" >
+
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="email-reply-body-send ">
+                            <button type="submit" class="btn">send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <template id="line-inbox">
+            <li> 
+                <a href="#email1"  class="email-list-show"> 
+                    <strong>from:</strong> {{sender}} <br/>
+                    <strong>subject: </strong> {{subject}}<br/> 
+                    <i>{{time_sent_string}}</i> <br/> 
+
+                </a>
+                <span  class="email-list-delete">
+                    <a href="#deleteThis">    
+                        x
+                    </a>
+                </span>
+
+            </li>
+        </template>
+
+        <script src ="javascript/main.js"></script>
+
+    </body>
+</html>

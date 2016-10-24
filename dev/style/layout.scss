@@ -1,0 +1,184 @@
+
+.container{
+    max-width: #{$grid * 80}px;
+    margin: #{$grid / 2}px auto;
+    min-height: #{$app_height}px;
+    display: table;
+    .container-left, .container-rigth{
+        min-height: inherit;
+    }
+    .email-list, .email {
+        border: 1px solid $main_border_color;
+        // min-height: #{$app_height - ($grid + $grid/4) }px;;
+        margin: #{$grid / 2}px ;
+        padding : #{$grid / 2}px;
+
+    }
+    .email-list{
+        .email-list-title{
+            padding: #{$grid}px 0 #{$grid}px 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid $main_border_color;
+            &:first-child{
+                padding: #{$grid/2}px 0 #{$grid}px 0;
+            }
+        }
+        .email-list-items  {
+            max-height:  #{$grid * 20}px;
+            overflow: auto;
+              & > li{
+                border-bottom: 1px dotted $main_border_color;
+                &.read-item{
+                    * {
+                        color: #bbb;
+                    }
+                    
+                }
+                &:last-child{
+                    border: 0;
+                }
+                > a{
+                    line-height: #{$grid * 2}px;
+                    display:block;
+                    padding-left: #{$grid * 1.5}px;
+                    font-size: 1.1rem;
+                    transition: background-color .25s ease-in-out;
+                    &:hover{
+                        background-color: $main_color;
+                    }
+                    &:hover ~ .email-list-delete{
+                        display: block;
+                    }
+                }
+                .email-list-delete{
+                    color: #fff;
+                    display:none;
+                    margin-top: - #{$grid*2 + $grid/4}px;
+                    margin-right:  #{$grid/2}px;
+                    font-weight:bold;
+                    position: relative;
+                    float: right;
+                    height: 1.2em;
+                    width:  1.2em;
+                    text-align:center;
+                    background-color: $secondary_color;
+                    @include rounded(3px);
+                    > a {
+                        color: inherit;
+                        display:block;
+                        line-height: #{$grid}px; 
+                        font-size: 1em;
+                        text-align:center;
+                        text-indent: -1px;
+                    }
+                    &:hover{
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+    .email {
+        width:100%;
+        .email-body{
+            .email-body-title{
+                margin: #{$grid}px 0 #{$grid/2}px;
+                padding: #{$grid/2}px ;
+                font-size: 1.5em;
+                .email-body-title{
+                    font-size: inherit;
+                }
+                .email-list-title-unread{
+                    font-size: 1em;
+                    line-height: 1.5em;
+                }
+                // border: 1px solid $main_border_color;
+                .email-body-title-subject{
+                    display:block;
+                    float:left;
+                    font-size: inherit;
+                    margin-right: #{$grid/2}px;
+                }
+                h1{
+                    font-size: inherit;
+                    float: left;
+                }
+            }
+            .email-body-text{
+                padding: #{$grid/2}px ;
+                border: 1px solid $main_border_color;
+                font-size:1.5em;
+                line-height: 1.5em;
+            }
+            .email-body-actions{
+                margin: #{$grid/2}px 0;
+                padding: #{$grid/2}px ;
+                display: none;
+                // border: 1px solid $main_border_color;
+                ul {
+                    li{
+                        display: inline;
+                        a {
+                            color:$action_color;
+                            &:hover{
+                                color: $link_hover_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .email-reply {
+            display:none;
+            float: left;
+            .email-reply-body-title-input{
+                border: 1px solid $main_border_color;
+                margin: 0 0 #{$grid/2}px 0;
+                padding: 0 #{$grid/2}px;
+                line-height: #{$grid*2}px;
+                background-color: $main_color;
+            }
+            .email-reply-body-textarea{
+                font-size:1.2em;
+                border: 1px solid $main_border_color;
+                height: #{$grid*15}px;
+                background-color: $main_color;
+            }
+        }
+        .email-tools{
+            .email-tools-itens-delete{
+                color: #fff;
+                margin-right:  #{$grid/2}px;
+                font-weight:bold;
+                float: right;
+                height: 1.2em;
+                width:  1.2em;
+                text-align:center;
+                line-height: 1em;
+                background-color: #c00;
+                @include rounded(3px);
+            }
+            background-color: $main_color; 
+            border: 1px dotted $main_border_color;
+            display:table;
+            width:100%;
+            padding: #{$grid/2}px;
+            .email-tools-itens {
+                li{
+                    text-align:center;
+                    &:first-child{
+                        text-align: left;
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                    a{
+                        &:hover{
+                            color: $link_hover_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
